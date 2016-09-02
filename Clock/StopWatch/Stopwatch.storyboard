@@ -8,7 +8,7 @@
         <!--StopWatch-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="StopWatch" id="BYZ-38-t0r" customClass="StopWatchViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="StopWatch" id="BYZ-38-t0r" customClass="StopWatchViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -63,7 +63,7 @@
                                     <action selector="startButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Zc-93-txn"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kpq-wX-xt1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kpq-wX-xt1">
                                 <rect key="frame" x="20" y="340" width="560" height="211"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -71,7 +71,7 @@
                                 </constraints>
                                 <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="HeaderCell" id="kQg-zU-EpG" customClass="StopWatchCustomHeaderCell" customModule="Timer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="HeaderCell" id="kQg-zU-EpG" customClass="StopWatchCustomHeaderCell" customModule="Clock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kQg-zU-EpG" id="akE-S4-76R">
@@ -133,7 +133,7 @@
                                             <outlet property="headerLabel3" destination="Kml-Om-Qiq" id="KA2-Qd-k9T"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="RowCell" id="C0L-Fj-aFe" customClass="StopWatchCustomRowCell" customModule="Timer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="RowCell" id="C0L-Fj-aFe" customClass="StopWatchCustomRowCell" customModule="Clock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C0L-Fj-aFe" id="lf3-tw-pD2">

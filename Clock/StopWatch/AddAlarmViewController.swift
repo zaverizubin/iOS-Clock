@@ -197,7 +197,7 @@ class AddAlarmViewController: UITableViewController, UIPickerViewDelegate, UIPic
                 }else{
                    AlarmModel.alarms.append(alarm!)
                 }
-
+                alarm!.startTimer()
                 break
         default:
             break

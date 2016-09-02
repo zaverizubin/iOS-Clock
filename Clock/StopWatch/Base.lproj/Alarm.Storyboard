@@ -8,7 +8,7 @@
         <!--Alarm-->
         <scene sceneID="kmM-x8-lyZ">
             <objects>
-                <viewController title="Alarm" id="k1W-5d-uDe" customClass="AlarmViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Alarm" id="k1W-5d-uDe" customClass="AlarmViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zIt-TD-A80"/>
                         <viewControllerLayoutGuide type="bottom" id="06q-nE-abz"/>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RowCell" editingAccessoryType="disclosureIndicator" rowHeight="75" id="1Ei-sQ-7AK" customClass="AlarmCustomRowCell" customModule="Timer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RowCell" editingAccessoryType="disclosureIndicator" rowHeight="75" id="1Ei-sQ-7AK" customClass="AlarmCustomRowCell" customModule="Clock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Ei-sQ-7AK" id="aMw-o5-lWC">
@@ -130,7 +130,7 @@
         <!--Sound-->
         <scene sceneID="Uw0-aF-0lu">
             <objects>
-                <tableViewController title="Sound" id="qvm-3c-zUd" customClass="AddAlarmViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Sound" id="qvm-3c-zUd" customClass="AddAlarmViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kjl-ha-uKI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -381,7 +381,7 @@
         <!--Repeat-->
         <scene sceneID="Y5U-Qa-Tsh">
             <objects>
-                <tableViewController title="Repeat" id="yHQ-BT-hgI" customClass="RepeatAlarmViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Repeat" id="yHQ-BT-hgI" customClass="RepeatAlarmViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bts-UO-Snw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -409,7 +409,7 @@
         <!--Label-->
         <scene sceneID="7bu-Yk-UTC">
             <objects>
-                <viewController title="Label" id="kj8-fk-Hwb" customClass="AlarmLabelViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Label" id="kj8-fk-Hwb" customClass="AlarmLabelViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wP9-XJ-LRD"/>
                         <viewControllerLayoutGuide type="bottom" id="4Wj-tc-eV2"/>
@@ -442,7 +442,7 @@
         <!--Alarm Vibration View Controller-->
         <scene sceneID="eWt-GI-MvP">
             <objects>
-                <tableViewController id="3qX-yg-Q7R" customClass="AlarmVibrationViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3qX-yg-Q7R" customClass="AlarmVibrationViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="fO2-lm-Ql6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -504,7 +504,7 @@
         <!--Sound-->
         <scene sceneID="d6o-jf-sYe">
             <objects>
-                <tableViewController title="Sound" id="w2T-tg-hhH" customClass="AlarmSoundViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Sound" id="w2T-tg-hhH" customClass="AlarmSoundViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="bkQ-w1-c3j">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

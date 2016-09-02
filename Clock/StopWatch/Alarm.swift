@@ -8,22 +8,63 @@
 
 import Foundation
 
+
 class Alarm: NSObject, NSCoding{
+    
+    var nc:NSNotificationCenter = NSNotificationCenter.defaultCenter()
+    
+    var notificationDoneKey:String = "alarmDone"
+    
+    var myTimer:NSTimer?
+    
+    var hour:Int = 0
+    
+    var minute:Int = 0
+    
+    var isPM:Bool = false
+    
+    var repeatAlarms:[RepeatAlarmEnum] = []
+    
+    var label:String = "Alarm"
+    
+    var vibration:VibrationAlarmEnum = VibrationAlarmEnum.Alert
+    
+    var sound:RingtoneAlarmEnum = RingtoneAlarmEnum.Radar
+    
+    var snooze:Bool = true
+    
+    var isActive:Bool = true{
+        didSet{
+            if(!isActive){
+                if myTimer != nil{
+                    myTimer!.invalidate()
+                }
+            }else{
+                startTimer()
+            }
+        }
+    }
+
+    
+    var displayTime : String{
+        get {
+            return String(format: "%02d:%02d",  hour, minute)
+        }
+    }
+
     
     static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("alarms")
     
     override init(){
         super.init()
-        let date = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([.Hour, .Minute], fromDate: date)
-        hour = (components.hour == 0 || components.hour == 12) ? 12:components.hour % 12
-        minute = components.minute
-        isPM = components.hour>=12
-    }
+        
+        hour = getHour()
+        minute = getMinute()
+        isPM = isTimePM()
+ }
     
-    init?(hour: Int, minute: Int, isPM: Bool, label:String, vibration:VibrationAlarmEnum, sound:RingtoneAlarmEnum, snooze:Bool, isActive:Bool ) {
+    init?(hour: Int, minute: Int, isPM: Bool, label:String, vibration:VibrationAlarmEnum, sound:RingtoneAlarmEnum, snooze:Bool, isActive:Bool) {
         super.init()
         self.hour = hour
         self.minute = minute
@@ -48,34 +89,53 @@ class Alarm: NSObject, NSCoding{
         
         self.init(hour: hour , minute: minute, isPM: isPM, label:label, vibration: VibrationAlarmEnum(rawValue: vibration)!, sound: RingtoneAlarmEnum(rawValue: sound)!, snooze: snooze, isActive: isActive)
     }
+    
+    func startTimer(){
+        if myTimer != nil{
+            myTimer!.invalidate()
+        }
+        myTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(Alarm.checkTimeup), userInfo: nil, repeats: true)
+        NSRunLoop.currentRunLoop().addTimer(myTimer!, forMode: NSRunLoopCommonModes)
 
+    }
     
-    var myTimer:NSTimer?
+    func stopTimer(){
+        myTimer?.invalidate()
+    }
     
-    var hour:Int = 0
-    
-    var minute:Int = 0
-    
-    var isPM:Bool = false
-    
-    var repeatAlarms:[RepeatAlarmEnum] = []
-    
-    var label:String = "Alarm"
-    
-    var vibration:VibrationAlarmEnum = VibrationAlarmEnum.Alert
-    
-    var sound:RingtoneAlarmEnum = RingtoneAlarmEnum.Radar
-    
-    var snooze:Bool = true
-    
-    var isActive:Bool = true
-    
-    var displayTime : String{
-        get {
-            return String(format: "%02d:%02d",  hour, minute)
-            
+    dynamic func checkTimeup(){
+        if(hour == getHour() && minute == getMinute() && isPM == isTimePM())
+        {
+            stopTimer()
+            isActive = false
+            let index = (AlarmModel.alarms as NSArray).indexOfObject(self)
+            nc.postNotificationName(notificationDoneKey, object: index)
         }
     }
+    
+    
+    
+    func getHour() -> Int{
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Hour, .Minute], fromDate: date)
+        return (components.hour == 0 || components.hour == 12) ? 12 : components.hour % 12
+    }
+    
+    func getMinute() -> Int{
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Hour, .Minute], fromDate: date)
+        return components.minute
+    }
+    
+    func isTimePM() -> Bool{
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Hour, .Minute], fromDate: date)
+        return components.hour >= 12
+    }
+    
     
     // MARK: Types
     

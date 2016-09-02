@@ -25,12 +25,19 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var selectedAlarmIndex:Int?
     
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         if let savedAlarms = loadAlarms() {
             AlarmModel.alarms = savedAlarms
+            addNotificationListeners()
         }
         alarmTableView.delegate = self
         alarmTableView.dataSource = self
@@ -46,8 +53,16 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
         toggleEditButton()
         self.tabBarItem.image = UIImage(named: "Alarm")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         self.tabBarItem.selectedImage = UIImage(named: "Alarm-down")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        
+
     }
 
+    func addNotificationListeners(){
+        for alarm in AlarmModel.alarms{
+            alarm.nc.addObserver(self, selector: #selector(AlarmViewController.onAlarmTimeout), name: alarm.notificationDoneKey, object: nil)
+        }
+    }
+    
     // MARK: - Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -64,22 +79,21 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! AlarmCustomRowCell
         
         let alarm = AlarmModel.alarms[indexPath.row]
-        
-        cell.timeLabel.text =  alarm.displayTime
-        cell.amPMLabel.text =  alarm.isPM ? "PM":"AM"
-        cell.alarmLabel.text = alarm.label
-        cell.enableSwitch.on = true
+        cell.configureUI(alarm)
         cell.tag = indexPath.row
+        
         return cell
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            let alarm = AlarmModel.alarms[indexPath.row]
+            alarm.stopTimer()
             AlarmModel.alarms.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             updateNoAlarmsText()
-            saveAlarms()
+            persistAlarms()
         }
         toggleEditButton()
     }
@@ -106,7 +120,7 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
         noAlarmsLabel.text = AlarmModel.alarms.count>0 ? "" : noAlarmsText;
     }
     
-    func saveAlarms(){
+    func persistAlarms(){
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(AlarmModel.alarms, toFile: Alarm.ArchiveURL.path!)
         if !isSuccessfulSave {
             print("Failed to save alarms...")
@@ -118,6 +132,24 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     }
     
+    func onAlarmTimeout(notification: NSNotification){
+        
+        let index = notification.object as! Int
+        let alarm = AlarmModel.alarms[index]
+        
+        let cell = alarmTableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0)) as! AlarmCustomRowCell
+        cell.onAlarmDone()
+        
+        
+        let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
+        if(alarm.snooze){
+           alert.addAction(UIAlertAction(title: "Snooze", style: UIAlertActionStyle.Default, handler: nil))
+        }
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
     
     // MARK: - Navigation
 
@@ -155,7 +187,7 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBAction func cancelToAlarmViewController(segue:UIStoryboardSegue) {
         dismissEditingMode()
-        saveAlarms()
+        persistAlarms()
         alarmTableView.reloadData()
     }
     
@@ -165,8 +197,10 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
         if segue.sourceViewController is AddAlarmViewController {
             updateNoAlarmsText()
             alarmTableView.reloadData()
+            addNotificationListeners()
+            persistAlarms()
         }
-        saveAlarms()
+        
     }
     
     

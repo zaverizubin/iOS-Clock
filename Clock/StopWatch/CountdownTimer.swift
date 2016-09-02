@@ -58,6 +58,7 @@ class CountdownTimer{
     
     func resumeCountDown(){
         myTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(CountdownTimer.updateTimer), userInfo: nil, repeats: true)
+        NSRunLoop.currentRunLoop().addTimer(myTimer!, forMode: NSRunLoopCommonModes)
     }
     
     func stopCountDown(){

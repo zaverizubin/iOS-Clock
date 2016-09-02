@@ -48,7 +48,8 @@ class StopWatchTimer :NSObject{
     
     func startTimer(){
         myTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: #selector(StopWatchTimer.updateTimer(_:)), userInfo: nil, repeats: true)
-
+        NSRunLoop.currentRunLoop().addTimer(myTimer!, forMode: NSRunLoopCommonModes)
+        
     }
     
     func stopTimer(){

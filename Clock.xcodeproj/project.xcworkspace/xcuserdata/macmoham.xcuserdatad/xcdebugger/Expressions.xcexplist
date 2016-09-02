@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "AlarmCustomRowCell.willTransitionToState(UITableViewCellStateMask) -&gt; ():AlarmCustomRowCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "RepeatAlarmViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:RepeatAlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "RepeatAlarmEnum(rawValue: indexPath.row)!">
+            </PersistentString>
+            <PersistentString
+               value = "selectedAlarmRepeats">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AlarmViewController.saveAlarm(UIStoryboardSegue) -&gt; ():AlarmViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AlarmViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():AlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue.destinationViewController">
+            </PersistentString>
+            <PersistentString
+               value = "alarmModel.alarms[selectedIndex]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AlarmSoundViewController.selectedAlarmVibration.didset:AlarmSoundViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedAlarmVibration">
+            </PersistentString>
+            <PersistentString
+               value = "alarmModel.alarmVibrationDictionary[selectedAlarmVibration]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AlarmSoundViewController.tableView(UITableView, didSelectRowAtIndexPath : NSIndexPath) -&gt; ():AlarmSoundViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "alarm?.Sound.rawValue">
+            </PersistentString>
+            <PersistentString
+               value = " alarm?.Sound">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddAlarmViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:AddAlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddAlarmViewController.onDeleteAlarmClick(AnyObject) -&gt; ():AddAlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "AlarmModel.alarms">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RepeatAlarmViewController.tableView(UITableView, didSelectRowAtIndexPath : NSIndexPath) -&gt; ():RepeatAlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedAlarmRepeats">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Alarm.encodeWithCoder(NSCoder) -&gt; ():Alarm.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sound.rawValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddAlarmViewController.selectedAlarmSound.didset:AddAlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedAlarmSound">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddAlarmViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():AddAlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "amPMPicker.selectedRowInComponent(0)">
+            </PersistentString>
+            <PersistentString
+               value = "(segue.destinationViewController as? AlarmLabelViewController)">
+            </PersistentString>
+            <PersistentString
+               value = "segue.identifier">
+            </PersistentString>
+            <PersistentString
+               value = "alarm">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AlarmVibrationViewController.viewWillDisappear(Bool) -&gt; ():AlarmVibrationViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController?.viewControllers">
+            </PersistentString>
+            <PersistentString
+               value = "alarm?.Vibration">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AlarmViewController.saveToAlarmViewController(UIStoryboardSegue) -&gt; ():AlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "noAlarmsLabel.text">
+            </PersistentString>
+            <PersistentString
+               value = "alarmModel.alarms.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddAlarmViewController.selectedAlarmRepeats.didset:AddAlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedAlarmRepeats">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AlarmViewController.tableView(UITableView, willSelectRowAtIndexPath : NSIndexPath) -&gt; NSIndexPath?:AlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddAlarmViewController.viewDidLoad() -&gt; ():AddAlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segueSourceViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddAlarmViewController.configureUI() -&gt; ():AddAlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(alarm?.isPM)!">
+            </PersistentString>
+            <PersistentString
+               value = "components.hour&lt;12">
+            </PersistentString>
+            <PersistentString
+               value = "alarmModel.hours">
+            </PersistentString>
+            <PersistentString
+               value = "components.hour">
+            </PersistentString>
+            <PersistentString
+               value = "alarm">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddAlarmViewController.tableView(UITableView, heightForRowAtIndexPath : NSIndexPath) -&gt; CGFloat:AddAlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tableView.cellForRowAtIndexPath(indexPath)">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ClockTabBarController.configureUI() -&gt; ():ClockTabViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.tabBar.items![0].image">
+            </PersistentString>
+            <PersistentString
+               value = "self.tabBar.items">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AlarmViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:AlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.alpha">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AlarmCustomRowCell.onUISwitchChange(UISwitch) -&gt; ():AlarmCustomRowCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.tag">
+            </PersistentString>
+            <PersistentString
+               value = "self.superview">
+            </PersistentString>
+            <PersistentString
+               value = "AlarmModel.alarms[self.tag].isActive">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AlarmViewController.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:AlarmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "AlarmModel.alarms.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

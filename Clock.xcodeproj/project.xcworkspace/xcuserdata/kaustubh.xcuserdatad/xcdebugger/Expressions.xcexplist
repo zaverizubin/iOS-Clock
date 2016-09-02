@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "CountdownTimer.updateTimer() -&gt; ():CountdownTimer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "countdownSeconds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Timer.lapTimes.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.resetButtonClick(UIButton) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "secondaryTimer.displayTime">
+            </PersistentString>
+            <PersistentString
+               value = "lapTimes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RingToneTableViewController.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:RingToneTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ringtones.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TimerViewController.(countDownComplete(TimerViewController) -&gt; () -&gt; ()).(closure #1):TimerViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "RingToneTableViewController.stopSound() -&gt; ():RingToneTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "soundPlayer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.displayLapTimes() -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.childViewControllers">
+            </PersistentString>
+            <PersistentString
+               value = "Timer.lapTimes.count">
+            </PersistentString>
+            <PersistentString
+               value = "tableView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RingToneTableViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:RingToneTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ringtone">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.section">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SoundPlayer.stopSound() -&gt; ():SoundPlayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "alarmAudioPlayer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TimerViewController.startButtonClick(UIButton) -&gt; ():TimerViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TimerViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():TimerViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue.destinationViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.rowLabel1">
+            </PersistentString>
+            <PersistentString
+               value = "Timer.elapsedTimes">
+            </PersistentString>
+            <PersistentString
+               value = "lapTimes">
+            </PersistentString>
+            <PersistentString
+               value = "Timer.lapTimes[indexPath.row]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TimerViewController.configureView(Bool) -&gt; ():TimerViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "hoursPicker">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RingToneTableViewController.numberOfSectionsInTableView(UITableView) -&gt; Int:RingToneTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tableView == ringtonesTableView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RingToneInnerTableViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:RingToneInnerTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.section">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RingToneTableViewController.tableView(UITableView, didSelectRowAtIndexPath : NSIndexPath) -&gt; ():RingToneTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ringtone">
+            </PersistentString>
+            <PersistentString
+               value = "ringtones.indexOf(ringtone)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RingToneTableViewController.playSound(NSIndexPath) -&gt; ():RingToneTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ringtones[0]">
+            </PersistentString>
+            <PersistentString
+               value = "RingtoneModel().defaultRingtone">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewDidLoad() -&gt; ():ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.init(coder : NSCoder) -&gt; ViewController?:ViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

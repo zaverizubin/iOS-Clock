@@ -43,20 +43,25 @@ class AlarmCustomRowCell: UITableViewCell {
     }
 
     @IBAction func onUISwitchChange(sender: UISwitch) {
-        self.alpha = sender.on ? 1.0 : 0.5
-        AlarmModel.alarms[self.tag].isActive = sender.on
+        self.contentView.alpha = sender.on ? 1.0 : 0.5
+        let alarm = AlarmModel.alarms[self.tag]
+        alarm.isActive = sender.on
+        if(sender.on){
+            alarm.startTimer()
+        }
+        AlarmModel.persistAlarms()
     }
     
     func configureUI(alarm:Alarm){
         timeLabel.text =  alarm.displayTime
         amPMLabel.text =  alarm.isPM ? "PM":"AM"
         alarmLabel.text = alarm.label
-        enableSwitch.on = true
-        self.alpha = alarm.isActive ? 1.0 : 0.5
+        enableSwitch.on = alarm.isActive
+        self.contentView.alpha = alarm.isActive ? 1.0 : 0.5
     }
     
     func onAlarmDone(){
         self.enableSwitch.on = false
-        self.alpha = 0.5
+        self.contentView.alpha = 0.5
     }
 }

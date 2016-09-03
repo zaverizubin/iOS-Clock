@@ -31,6 +31,7 @@
 		8C6910721D759E0D00620CC5 /* AlarmLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6910711D759E0D00620CC5 /* AlarmLabelViewController.swift */; };
 		8C6910741D75BEFD00620CC5 /* AlarmSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6910731D75BEFD00620CC5 /* AlarmSoundViewController.swift */; };
 		8C8BCBFD1D7474DF0088E87D /* RepeatAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8BCBFC1D7474DF0088E87D /* RepeatAlarmViewController.swift */; };
+		8CAE3D261D7AC59300D598FF /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE3D251D7AC59300D598FF /* UIAlertController.swift */; };
 		8CCBF7021D6EFA1C009C5E78 /* Countdown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCBF7001D6EFA1C009C5E78 /* Countdown.storyboard */; };
 		8CCBF7041D6EFA3E009C5E78 /* Stopwatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCBF7031D6EFA3E009C5E78 /* Stopwatch.storyboard */; };
 		8CCBF7071D6EFA67009C5E78 /* Alarm.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCBF7051D6EFA67009C5E78 /* Alarm.Storyboard */; };
@@ -75,6 +76,7 @@
 		8C6910711D759E0D00620CC5 /* AlarmLabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmLabelViewController.swift; sourceTree = "<group>"; };
 		8C6910731D75BEFD00620CC5 /* AlarmSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSoundViewController.swift; sourceTree = "<group>"; };
 		8C8BCBFC1D7474DF0088E87D /* RepeatAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatAlarmViewController.swift; sourceTree = "<group>"; };
+		8CAE3D251D7AC59300D598FF /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		8CCBF7011D6EFA1C009C5E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Countdown.storyboard; sourceTree = "<group>"; };
 		8CCBF7031D6EFA3E009C5E78 /* Stopwatch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stopwatch.storyboard; sourceTree = "<group>"; };
 		8CCBF7061D6EFA67009C5E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Alarm.Storyboard; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		329F3E331D4B665300C18EB3 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				8CAE3D241D7AC57200D598FF /* Extensions */,
 				8C4074241D6D7CA70015FD5F /* Views */,
 				8C4074231D6D7C7A0015FD5F /* Domain */,
 				8C4074221D6D7C260015FD5F /* Controllers */,
@@ -191,6 +194,14 @@
 				8C4074291D6DA4010015FD5F /* AlarmCustomRowCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		8CAE3D241D7AC57200D598FF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8CAE3D251D7AC59300D598FF /* UIAlertController.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +317,7 @@
 				8C8BCBFD1D7474DF0088E87D /* RepeatAlarmViewController.swift in Sources */,
 				323DDC0B1D54A1F5001D4683 /* CountdownTimer.swift in Sources */,
 				8C40742A1D6DA4010015FD5F /* AlarmCustomRowCell.swift in Sources */,
+				8CAE3D261D7AC59300D598FF /* UIAlertController.swift in Sources */,
 				8C6910741D75BEFD00620CC5 /* AlarmSoundViewController.swift in Sources */,
 				329F3E631D508C9200C18EB3 /* StopWatchCustomRowCell.swift in Sources */,
 				329F3E371D4B665300C18EB3 /* StopWatchViewController.swift in Sources */,

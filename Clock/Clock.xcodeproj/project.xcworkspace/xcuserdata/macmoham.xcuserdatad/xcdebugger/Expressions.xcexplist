@@ -28,6 +28,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "Alarm.getHour() -&gt; Int:Alarm.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "components.hour">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AlarmViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():AlarmViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -35,6 +43,14 @@
             </PersistentString>
             <PersistentString
                value = "alarmModel.alarms[selectedIndex]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Alarm.getMinute() -&gt; Int:Alarm.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "components.minute">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -50,13 +66,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "Alarm.checkTimeup() -&gt; ():Alarm.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "minute">
+            </PersistentString>
+            <PersistentString
+               value = "hour">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AlarmSoundViewController.tableView(UITableView, didSelectRowAtIndexPath : NSIndexPath) -&gt; ():AlarmSoundViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = " alarm?.Sound">
+               value = "alarm?.Sound.rawValue">
             </PersistentString>
             <PersistentString
-               value = "alarm?.Sound.rawValue">
+               value = " alarm?.Sound">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -184,10 +211,10 @@
                value = "(alarm?.isPM)!">
             </PersistentString>
             <PersistentString
-               value = "alarm">
+               value = "alarm!.hour">
             </PersistentString>
             <PersistentString
-               value = "alarm!.hour">
+               value = "components.hour">
             </PersistentString>
             <PersistentString
                value = "alarmModel.hours">
@@ -196,7 +223,7 @@
                value = "components.hour&lt;12">
             </PersistentString>
             <PersistentString
-               value = "components.hour">
+               value = "alarm">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -204,13 +231,13 @@
          contextName = "AddAlarmViewController.tableView(UITableView, heightForRowAtIndexPath : NSIndexPath) -&gt; CGFloat:AddAlarmViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "indexPath">
+               value = "tableView.cellForRowAtIndexPath(indexPath)">
             </PersistentString>
             <PersistentString
                value = "indexPath.row">
             </PersistentString>
             <PersistentString
-               value = "tableView.cellForRowAtIndexPath(indexPath)">
+               value = "indexPath">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

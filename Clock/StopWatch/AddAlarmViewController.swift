@@ -191,6 +191,7 @@ class AddAlarmViewController: UITableViewController, UIPickerViewDelegate, UIPic
                 alarm!.isPM = amPMPicker.selectedRowInComponent(0) == 1
                 alarm!.label = alarmLabel.text!
                 alarm!.snooze = snoozeSwitch.on
+                alarm!.isActive = true
                 
                 if(index < AlarmModel.alarms.count){
                     AlarmModel.alarms[index!] = alarm!

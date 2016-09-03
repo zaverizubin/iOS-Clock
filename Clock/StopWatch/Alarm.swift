@@ -74,6 +74,7 @@ class Alarm: NSObject, NSCoding{
         self.sound = sound
         self.snooze = snooze
         self.isActive = isActive
+        
     }
     
     convenience required init?(coder aDecoder: NSCoder) {
@@ -88,6 +89,9 @@ class Alarm: NSObject, NSCoding{
         let isActive = aDecoder.decodeBoolForKey(PropertyKey.isActiveKey)
         
         self.init(hour: hour , minute: minute, isPM: isPM, label:label, vibration: VibrationAlarmEnum(rawValue: vibration)!, sound: RingtoneAlarmEnum(rawValue: sound)!, snooze: snooze, isActive: isActive)
+        if(isActive){
+            startTimer()
+        }
     }
     
     func startTimer(){
@@ -119,7 +123,8 @@ class Alarm: NSObject, NSCoding{
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components([.Hour, .Minute], fromDate: date)
-        return (components.hour == 0 || components.hour == 12) ? 12 : components.hour % 12
+        let hour = components.hour % 12 == 0 ? 12 : components.hour % 12
+        return hour
     }
     
     func getMinute() -> Int{

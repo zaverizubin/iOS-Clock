@@ -34,7 +34,7 @@ class AlarmModel{
             }
     
     static func persistAlarms(){
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(AlarmModel.alarms, toFile: Alarm.ArchiveURL.path!)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(AlarmModel.alarms, toFile: Alarm.ArchiveURL!.path!)
         if !isSuccessfulSave {
             print("Failed to save alarms...")
         }

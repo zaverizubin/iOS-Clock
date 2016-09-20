@@ -34,7 +34,7 @@
 		8CAE3D261D7AC59300D598FF /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE3D251D7AC59300D598FF /* UIAlertController.swift */; };
 		8CCBF7021D6EFA1C009C5E78 /* Countdown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCBF7001D6EFA1C009C5E78 /* Countdown.storyboard */; };
 		8CCBF7041D6EFA3E009C5E78 /* Stopwatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCBF7031D6EFA3E009C5E78 /* Stopwatch.storyboard */; };
-		8CCBF7071D6EFA67009C5E78 /* Alarm.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCBF7051D6EFA67009C5E78 /* Alarm.Storyboard */; };
+		8CCBF7071D6EFA67009C5E78 /* Alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCBF7051D6EFA67009C5E78 /* Alarm.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +79,7 @@
 		8CAE3D251D7AC59300D598FF /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		8CCBF7011D6EFA1C009C5E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Countdown.storyboard; sourceTree = "<group>"; };
 		8CCBF7031D6EFA3E009C5E78 /* Stopwatch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stopwatch.storyboard; sourceTree = "<group>"; };
-		8CCBF7061D6EFA67009C5E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Alarm.Storyboard; sourceTree = "<group>"; };
+		8CCBF7061D6EFA67009C5E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Alarm.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,7 @@
 				8C4074211D6D7C100015FD5F /* Models */,
 				329F3E341D4B665300C18EB3 /* AppDelegate.swift */,
 				329F3E381D4B665300C18EB3 /* Main.storyboard */,
-				8CCBF7051D6EFA67009C5E78 /* Alarm.Storyboard */,
+				8CCBF7051D6EFA67009C5E78 /* Alarm.storyboard */,
 				8CCBF7031D6EFA3E009C5E78 /* Stopwatch.storyboard */,
 				8CCBF7001D6EFA1C009C5E78 /* Countdown.storyboard */,
 				329F3E3B1D4B665300C18EB3 /* Assets.xcassets */,
@@ -284,7 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CCBF7071D6EFA67009C5E78 /* Alarm.Storyboard in Resources */,
+				8CCBF7071D6EFA67009C5E78 /* Alarm.storyboard in Resources */,
 				8CCBF7021D6EFA1C009C5E78 /* Countdown.storyboard in Resources */,
 				329F3E3F1D4B665300C18EB3 /* LaunchScreen.storyboard in Resources */,
 				8CCBF7041D6EFA3E009C5E78 /* Stopwatch.storyboard in Resources */,
@@ -374,12 +374,12 @@
 			name = Countdown.storyboard;
 			sourceTree = "<group>";
 		};
-		8CCBF7051D6EFA67009C5E78 /* Alarm.Storyboard */ = {
+		8CCBF7051D6EFA67009C5E78 /* Alarm.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8CCBF7061D6EFA67009C5E78 /* Base */,
 			);
-			name = Alarm.Storyboard;
+			name = Alarm.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -426,6 +426,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -463,6 +464,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

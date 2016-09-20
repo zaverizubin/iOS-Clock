@@ -53,6 +53,7 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
         toggleEditButton()
         self.tabBarItem.image = UIImage(named: "Alarm")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         self.tabBarItem.selectedImage = UIImage(named: "Alarm-down")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        alarmTableView.tableFooterView = UIView()
         updateNoAlarmsText()
 
     }
@@ -123,7 +124,7 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
     
         
     func loadAlarms() -> [Alarm]? {
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(Alarm.ArchiveURL.path!) as? [Alarm]
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Alarm.ArchiveURL!.path!) as? [Alarm]
         
     }
     

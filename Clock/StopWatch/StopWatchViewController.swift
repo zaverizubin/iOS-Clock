@@ -114,7 +114,7 @@ class StopWatchViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! StopWatchCustomRowCell
-        cell.rowLabel1.text = String(StopWatchTimer.lapTimes.count - indexPath.row)
+        cell.rowLabel1.text = "Lap " + String(StopWatchTimer.lapTimes.count - indexPath.row)
         cell.rowLabel2.text = StopWatchTimer.lapTimes[indexPath.row]
         cell.rowLabel3.text = StopWatchTimer.elapsedTimes[indexPath.row]
         return cell

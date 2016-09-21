@@ -16,7 +16,6 @@
 		329F3E351D4B665300C18EB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F3E341D4B665300C18EB3 /* AppDelegate.swift */; };
 		329F3E371D4B665300C18EB3 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F3E361D4B665300C18EB3 /* StopWatchViewController.swift */; };
 		329F3E3A1D4B665300C18EB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 329F3E381D4B665300C18EB3 /* Main.storyboard */; };
-		329F3E3C1D4B665300C18EB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 329F3E3B1D4B665300C18EB3 /* Assets.xcassets */; };
 		329F3E3F1D4B665300C18EB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 329F3E3D1D4B665300C18EB3 /* LaunchScreen.storyboard */; };
 		329F3E4A1D4B665400C18EB3 /* StopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F3E491D4B665400C18EB3 /* StopWatchTests.swift */; };
 		329F3E611D4F896C00C18EB3 /* StopWatchCustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F3E601D4F896C00C18EB3 /* StopWatchCustomHeaderCell.swift */; };
@@ -30,6 +29,7 @@
 		8C48B37F1D78523F005D2E20 /* ClockTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C48B37E1D78523F005D2E20 /* ClockTabViewController.swift */; };
 		8C6910721D759E0D00620CC5 /* AlarmLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6910711D759E0D00620CC5 /* AlarmLabelViewController.swift */; };
 		8C6910741D75BEFD00620CC5 /* AlarmSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6910731D75BEFD00620CC5 /* AlarmSoundViewController.swift */; };
+		8C84D1A81D92783F000C0002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C84D1A71D92783F000C0002 /* Assets.xcassets */; };
 		8C8BCBFD1D7474DF0088E87D /* RepeatAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8BCBFC1D7474DF0088E87D /* RepeatAlarmViewController.swift */; };
 		8CAE3D261D7AC59300D598FF /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE3D251D7AC59300D598FF /* UIAlertController.swift */; };
 		8CCBF7021D6EFA1C009C5E78 /* Countdown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCBF7001D6EFA1C009C5E78 /* Countdown.storyboard */; };
@@ -58,7 +58,6 @@
 		329F3E341D4B665300C18EB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		329F3E361D4B665300C18EB3 /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		329F3E391D4B665300C18EB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		329F3E3B1D4B665300C18EB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		329F3E3E1D4B665300C18EB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		329F3E401D4B665300C18EB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		329F3E451D4B665400C18EB3 /* Clock.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Clock.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +74,7 @@
 		8C48B37E1D78523F005D2E20 /* ClockTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTabViewController.swift; sourceTree = "<group>"; };
 		8C6910711D759E0D00620CC5 /* AlarmLabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmLabelViewController.swift; sourceTree = "<group>"; };
 		8C6910731D75BEFD00620CC5 /* AlarmSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSoundViewController.swift; sourceTree = "<group>"; };
+		8C84D1A71D92783F000C0002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C8BCBFC1D7474DF0088E87D /* RepeatAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatAlarmViewController.swift; sourceTree = "<group>"; };
 		8CAE3D251D7AC59300D598FF /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		8CCBF7011D6EFA1C009C5E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Countdown.storyboard; sourceTree = "<group>"; };
@@ -121,6 +121,7 @@
 		329F3E331D4B665300C18EB3 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				8C84D1A71D92783F000C0002 /* Assets.xcassets */,
 				8CAE3D241D7AC57200D598FF /* Extensions */,
 				8C4074241D6D7CA70015FD5F /* Views */,
 				8C4074231D6D7C7A0015FD5F /* Domain */,
@@ -131,7 +132,6 @@
 				8CCBF7051D6EFA67009C5E78 /* Alarm.storyboard */,
 				8CCBF7031D6EFA3E009C5E78 /* Stopwatch.storyboard */,
 				8CCBF7001D6EFA1C009C5E78 /* Countdown.storyboard */,
-				329F3E3B1D4B665300C18EB3 /* Assets.xcassets */,
 				329F3E3D1D4B665300C18EB3 /* LaunchScreen.storyboard */,
 				329F3E401D4B665300C18EB3 /* Info.plist */,
 			);
@@ -149,6 +149,36 @@
 			path = StopWatchTests;
 			sourceTree = "<group>";
 		};
+		8C14D8EE1D92A155006C9F2B /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				8C33B0371D76B18F003CE351 /* AlarmVibrationViewController.swift */,
+				8C6910731D75BEFD00620CC5 /* AlarmSoundViewController.swift */,
+				8C6910711D759E0D00620CC5 /* AlarmLabelViewController.swift */,
+				8C8BCBFC1D7474DF0088E87D /* RepeatAlarmViewController.swift */,
+				8C4074271D6D7FE30015FD5F /* AddAlarmViewController.swift */,
+				8C4074251D6D7CF50015FD5F /* AlarmViewController.swift */,
+			);
+			name = Alarm;
+			sourceTree = "<group>";
+		};
+		8C14D8EF1D92A176006C9F2B /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				323DDC541D5B2E34001D4683 /* RingToneTableViewController.swift */,
+				323DDC081D5478D1001D4683 /* TimerViewController.swift */,
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
+		8C14D8F01D92A185006C9F2B /* Stopwatch */ = {
+			isa = PBXGroup;
+			children = (
+				329F3E361D4B665300C18EB3 /* StopWatchViewController.swift */,
+			);
+			name = Stopwatch;
+			sourceTree = "<group>";
+		};
 		8C4074211D6D7C100015FD5F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,15 +191,9 @@
 		8C4074221D6D7C260015FD5F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				323DDC541D5B2E34001D4683 /* RingToneTableViewController.swift */,
-				329F3E361D4B665300C18EB3 /* StopWatchViewController.swift */,
-				323DDC081D5478D1001D4683 /* TimerViewController.swift */,
-				8C4074251D6D7CF50015FD5F /* AlarmViewController.swift */,
-				8C4074271D6D7FE30015FD5F /* AddAlarmViewController.swift */,
-				8C8BCBFC1D7474DF0088E87D /* RepeatAlarmViewController.swift */,
-				8C6910711D759E0D00620CC5 /* AlarmLabelViewController.swift */,
-				8C6910731D75BEFD00620CC5 /* AlarmSoundViewController.swift */,
-				8C33B0371D76B18F003CE351 /* AlarmVibrationViewController.swift */,
+				8C14D8F01D92A185006C9F2B /* Stopwatch */,
+				8C14D8EF1D92A176006C9F2B /* Timer */,
+				8C14D8EE1D92A155006C9F2B /* Alarm */,
 				8C48B37E1D78523F005D2E20 /* ClockTabViewController.swift */,
 			);
 			name = Controllers;
@@ -248,7 +272,7 @@
 		329F3E291D4B665300C18EB3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Focalworks;
 				TargetAttributes = {
 					329F3E301D4B665300C18EB3 = {
@@ -288,7 +312,7 @@
 				8CCBF7021D6EFA1C009C5E78 /* Countdown.storyboard in Resources */,
 				329F3E3F1D4B665300C18EB3 /* LaunchScreen.storyboard in Resources */,
 				8CCBF7041D6EFA3E009C5E78 /* Stopwatch.storyboard in Resources */,
-				329F3E3C1D4B665300C18EB3 /* Assets.xcassets in Resources */,
+				8C84D1A81D92783F000C0002 /* Assets.xcassets in Resources */,
 				329F3E3A1D4B665300C18EB3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,8 +422,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -444,8 +470,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -464,6 +492,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

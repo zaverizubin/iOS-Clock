@@ -22,7 +22,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9aL-9g-jIs" id="VTi-03-tN8">
-                                            <frame key="frameInset" width="414" height="60"/>
+                                            <frame key="frameInset" width="414" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PtL-mv-gET">
@@ -39,11 +39,11 @@
                                             <constraint firstItem="PtL-mv-gET" firstAttribute="width" secondItem="9aL-9g-jIs" secondAttribute="width" id="rmx-GA-f1P"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="220" id="8Rp-Ir-Q3P">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="220" id="8Rp-Ir-Q3P">
                                         <rect key="frame" x="0.0" y="60" width="414" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Rp-Ir-Q3P" id="AfO-Lr-uhx">
-                                            <frame key="frameInset" width="414" height="220"/>
+                                            <frame key="frameInset" width="414" height="219.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80Z-S2-NMP">
@@ -95,7 +95,7 @@
                                         <rect key="frame" x="0.0" y="280" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6xr-ad-abh" id="mGL-zk-QJ2">
-                                            <frame key="frameInset" width="381" height="50"/>
+                                            <frame key="frameInset" width="381" height="49.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="When Timer Ends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lIQ-5E-BNH">
@@ -118,27 +118,27 @@
                                             <segue destination="TmI-mY-gXp" kind="presentation" identifier="SelectRingtoneSegue" id="3Ep-3V-T31"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="283" id="5Ia-dT-NNc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="283" id="5Ia-dT-NNc">
                                         <rect key="frame" x="0.0" y="330" width="414" height="283"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Ia-dT-NNc" id="js8-Df-uRz">
-                                            <frame key="frameInset" width="414" height="283"/>
+                                            <frame key="frameInset" width="414" height="282.66666666666669"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0K-Ni-g4L">
-                                                    <state key="normal" title="Start" backgroundImage="Start">
+                                                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0K-Ni-g4L">
+                                                    <state key="normal" title="Start" backgroundImage="ButtonBkg">
                                                         <color key="titleColor" red="0.17850951370000001" green="0.75250552400000004" blue="0.59529481480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="startButtonClick:" destination="2JP-HM-j2F" eventType="touchUpInside" id="SmL-RD-fok"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-Ya-aWK">
+                                                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-Ya-aWK">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="73" id="MJO-tM-TnU"/>
                                                         <constraint firstAttribute="width" constant="73" id="hJZ-gs-X3o"/>
                                                     </constraints>
-                                                    <state key="normal" title="Pause" backgroundImage="Start">
+                                                    <state key="normal" title="Pause" backgroundImage="ButtonBkg">
                                                         <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <variation key="default">
@@ -159,7 +159,7 @@
                                                 <constraint firstItem="S0K-Ni-g4L" firstAttribute="centerY" secondItem="Amc-Ya-aWK" secondAttribute="centerY" id="dBB-vq-kwt"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -169,7 +169,7 @@
                             <outlet property="delegate" destination="2JP-HM-j2F" id="rTB-dI-POb"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Timer" id="cP4-CV-exR"/>
+                    <tabBarItem key="tabBarItem" title="Timer" image="Timer" selectedImage="Timer-down" id="cP4-CV-exR"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="countdownLabel" destination="sqt-Sq-QnC" id="lDE-6i-esD"/>
@@ -201,7 +201,7 @@
                                         <rect key="frame" x="0.0" y="99" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H19-Gi-CFN" id="1Mg-zh-xtt">
-                                            <frame key="frameInset" width="414" height="50"/>
+                                            <frame key="frameInset" width="414" height="49.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buy More Tones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPp-sf-uto">
@@ -222,7 +222,7 @@
                                         <rect key="frame" x="0.0" y="205" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RdR-Wq-Z99" id="uHT-w4-If6">
-                                            <frame key="frameInset" width="414" height="50"/>
+                                            <frame key="frameInset" width="414" height="49.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -234,7 +234,7 @@
                                         <rect key="frame" x="0.0" y="291" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yT7-Is-GP0" id="jIg-NS-c3N">
-                                            <frame key="frameInset" width="414" height="50"/>
+                                            <frame key="frameInset" width="414" height="49.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stop Playing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j6-8s-THb">
@@ -293,6 +293,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Start" width="76" height="82"/>
+        <image name="ButtonBkg" width="75" height="75"/>
+        <image name="Timer" width="32" height="32"/>
+        <image name="Timer-down" width="32" height="32"/>
     </resources>
 </document>

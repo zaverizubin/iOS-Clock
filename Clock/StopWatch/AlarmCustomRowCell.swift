@@ -47,7 +47,7 @@ class AlarmCustomRowCell: UITableViewCell {
         let alarm = AlarmModel.alarms[self.tag]
         alarm.isActive = sender.on
         if(sender.on){
-            alarm.startTimer()
+            alarm.startAlarmTimer()
         }
         AlarmModel.persistAlarms()
     }

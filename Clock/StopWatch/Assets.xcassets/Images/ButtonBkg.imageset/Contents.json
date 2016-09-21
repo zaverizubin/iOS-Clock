@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Circular Button.jpg",
+      "filename" : "ButtonBkg.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Circular Button-1.jpg",
+      "filename" : "ButtonBkg-1.png",
       "scale" : "2x"
     },
     {

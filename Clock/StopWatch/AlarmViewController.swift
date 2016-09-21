@@ -61,7 +61,8 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
     func addNotificationListeners(){
         for alarm in AlarmModel.alarms{
             alarm.nc.removeObserver(self)
-            alarm.nc.addObserver(self, selector: #selector(AlarmViewController.onAlarmTimeout), name: alarm.notificationDoneKey, object: nil)
+            alarm.nc.addObserver(self, selector: #selector(AlarmViewController.onAlarmTimeout), name: alarm.notificationAlarmDoneKey, object: nil)
+            alarm.nc.addObserver(self, selector: #selector(AlarmViewController.onSnoozeTimeout), name: alarm.notificationSnoozeDoneKey, object: nil)
         }
     }
     
@@ -91,7 +92,7 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
         if editingStyle == .Delete {
             // Delete the row from the data source
             let alarm = AlarmModel.alarms[indexPath.row]
-            alarm.stopTimer()
+            alarm.stopAlarmTimer()
             AlarmModel.alarms.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             updateNoAlarmsText()
@@ -133,23 +134,34 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
         let index = notification.object as! Int
         let alarm = AlarmModel.alarms[index]
         
-        let cell = alarmTableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0)) as! AlarmCustomRowCell
-        cell.onAlarmDone()
-        
-        displayAlert(alarm)
+        displayAlert(alarm, index: index)
     }
     
-    func displayAlert(alarm: Alarm){
+    func onSnoozeTimeout(notification: NSNotification){
+        let index = notification.object as! Int
+        let alarm = AlarmModel.alarms[index]
+        displayAlert(alarm, index: index);
+    }
+    
+    func displayAlert(alarm: Alarm, index:Int){
         
         let soundPlayer = SoundPlayer()
         soundPlayer.playSound(AlarmModel().alarmRingtoneDictionary[alarm.sound]!)
         
-        let alertController = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "Alert", message: "Alarm", preferredStyle: UIAlertControllerStyle.Alert)
         if(alarm.snooze){
-            alertController.addAction(UIAlertAction(title: "Snooze", style: UIAlertActionStyle.Default, handler: nil))
+            alertController.addAction(UIAlertAction(title: "Snooze", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in
+                alarm.setToSnooze()
+            }))
         }
-        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
+        alertController.addAction(UIAlertAction(title: "Stop", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
             soundPlayer.stopSound()
+            if(alarm.repeatAlarms.count>0){
+                alarm.startAlarmTimer()
+            }else{
+                let cell = self.alarmTableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0)) as! AlarmCustomRowCell
+                cell.onAlarmDone()
+            }
         }))
         
         self.presentViewController(alertController, animated: true, completion: nil)

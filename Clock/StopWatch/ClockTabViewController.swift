@@ -16,19 +16,17 @@ class ClockTabBarController: UITabBarController {
     }
     
     func configureUI(){
-       
         
-        
-        self.tabBar.items![0].image = UIImage(named: "Alarm")?.imageWithRenderingMode(UIImageRenderingMode.Automatic)
-        self.tabBar.items![0].selectedImage = UIImage(named: "Alarm-down")?.imageWithRenderingMode(UIImageRenderingMode.Automatic)
+        self.tabBar.items![0].image = UIImage(named: "Alarm")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        self.tabBar.items![0].selectedImage = UIImage(named: "Alarm-down")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         
         self.tabBar.items![1].image = UIImage(named: "Stopwatch")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         self.tabBar.items![1].selectedImage = UIImage(named: "Stopwatch-down")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         
         self.tabBar.items![1].image = UIImage(named: "Timer")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         self.tabBar.items![1].selectedImage = UIImage(named: "Timer-down")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
-
+        
+        
     }
     
-
 }

@@ -13,9 +13,13 @@ class Alarm: NSObject, NSCoding{
     
     var nc:NSNotificationCenter = NSNotificationCenter.defaultCenter()
     
-    var notificationDoneKey:String = "alarmDone"
+    var notificationAlarmDoneKey:String = "alarmDone"
     
-    var myTimer:NSTimer?
+    var notificationSnoozeDoneKey:String = "snoozeDone"
+    
+    var myAlarmTimer:NSTimer?
+    
+    var mySnoozeTimer:NSTimer?
     
     var hour:Int = 0
     
@@ -36,11 +40,15 @@ class Alarm: NSObject, NSCoding{
     var isActive:Bool = true{
         didSet{
             if(!isActive){
-                if myTimer != nil{
-                    myTimer!.invalidate()
+                if myAlarmTimer != nil{
+                    myAlarmTimer!.invalidate()
                 }
+                if mySnoozeTimer != nil{
+                    mySnoozeTimer!.invalidate()
+                }
+                
             }else{
-                startTimer()
+                startAlarmTimer()
             }
         }
     }
@@ -90,33 +98,45 @@ class Alarm: NSObject, NSCoding{
         
         self.init(hour: hour , minute: minute, isPM: isPM, label:label, vibration: VibrationAlarmEnum(rawValue: vibration)!, sound: RingtoneAlarmEnum(rawValue: sound)!, snooze: snooze, isActive: isActive)
         if(isActive){
-            startTimer()
+            startAlarmTimer()
         }
     }
     
-    func startTimer(){
-        if myTimer != nil{
-            myTimer!.invalidate()
+    func startAlarmTimer(){
+        if myAlarmTimer != nil{
+            myAlarmTimer!.invalidate()
         }
-        myTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(Alarm.checkTimeup), userInfo: nil, repeats: true)
-        NSRunLoop.currentRunLoop().addTimer(myTimer!, forMode: NSRunLoopCommonModes)
+        myAlarmTimer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(Alarm.checkAlarmTimeup), userInfo: nil, repeats: true)
+        NSRunLoop.currentRunLoop().addTimer(myAlarmTimer!, forMode: NSRunLoopCommonModes)
 
     }
     
-    func stopTimer(){
-        myTimer?.invalidate()
+    func stopAlarmTimer(){
+        myAlarmTimer?.invalidate()
     }
     
-    dynamic func checkTimeup(){
+    func setToSnooze(){
+        if mySnoozeTimer != nil{
+            mySnoozeTimer!.invalidate()
+        }
+        mySnoozeTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: #selector(Alarm.onSnoozeTimeup), userInfo: nil, repeats: false)
+        NSRunLoop.currentRunLoop().addTimer(mySnoozeTimer!, forMode: NSRunLoopCommonModes)
+    }
+    
+    dynamic func checkAlarmTimeup(){
         if(hour == getHour() && minute == getMinute() && isPM == isTimePM())
         {
-            stopTimer()
+            stopAlarmTimer()
             isActive = false
             let index = (AlarmModel.alarms as NSArray).indexOfObject(self)
-            nc.postNotificationName(notificationDoneKey, object: index)
+            nc.postNotificationName(notificationAlarmDoneKey, object: index)
         }
     }
     
+    dynamic func onSnoozeTimeup(){
+        let index = (AlarmModel.alarms as NSArray).indexOfObject(self)
+        nc.postNotificationName(notificationSnoozeDoneKey, object: index)
+    }
     
     
     func getHour() -> Int{
